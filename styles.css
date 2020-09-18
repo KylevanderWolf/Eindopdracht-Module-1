@@ -1,0 +1,241 @@
+body, html {
+    height: 100%;
+    background-image: url("bg1.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    background-color: #272727;
+  }
+
+  .grid-container {
+    padding: 0;
+    margin: 10px;
+    height: 100%;
+    display: grid;
+    background-color:  #272727;
+    grid-gap: 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px auto auto 40px;
+    grid-template-areas: 
+    "h"
+    "m"
+    "c"
+    "f";
+  }
+
+  
+  .navbar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.homebtn {
+  cursor: pointer;
+  color: white;
+  font-size: 1.5em;
+  text-decoration: none;
+  outline: none;
+  display: flex;
+  margin-right: auto;
+  margin-left: 20px;
+
+}
+
+
+.contactbtn{
+  background-color: #EE585A;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 10px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: black;
+}
+
+header{
+  grid-area: h;
+}
+
+.main{
+  background-image: url("food.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-area: m;
+  display:flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.intro{
+  width: 70%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.9);
+  margin-bottom: -70px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+}
+
+.intro p {
+  font-size: 2em;
+  margin: 10px;
+  border-bottom: 3px solid #EE585A;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+
+
+.content{
+  grid-area: c;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin-top: 60px;
+  height: auto;
+}
+
+.card1, .card2, .card3, .card4 {
+  width: 250px;
+  height: 200px;
+  max-height: auto;
+  background-color: rgba(0,0,0,0.8);
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid transparent;
+  transition-duration: 0.6s;
+  margin: 20px;
+}
+
+.card1 img, .card2 img, .card3 img, .card4 img {
+  border-radius: 10px;
+  width: 200px;
+  height: 150px;
+}
+
+
+.card1 p, .card2 p, .card3 p, .card4 p{
+  font-size: 1.5em;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.recipe1btn, .recipe2btn, .recipe3btn, .recipe4btn {
+  margin-top: 10px;
+  background-color:#EE585A ;
+  padding: 10px 10px;
+  margin: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+  transition-duration: 0.6s
+}
+
+.card1:hover, .card2:hover, .card3:hover, .card4:hover{
+  border: 2px solid #EE585A
+}
+
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  grid-area: f;
+  padding: 10px;
+}
+
+
+
+/*Small screen/ laptops/ tablet */
+@media only screen and (min-width: 769px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "h"
+    "m"
+    "c"
+    "f";
+  }
+  .card1, .card2, .card3, .card4 {
+    margin: 40px;
+    }
+  .content{
+    flex-direction: row;
+    justify-content: center;
+  }
+  .intro {
+    width: 60%;
+  }
+  .intro header {
+    font-size: 2em;
+  }
+
+}
+
+
+/*Desktop */
+@media only screen and (min-width: 1025px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "h"
+    "m"
+    "c"
+    "f";
+  }
+  .card1, .card2, .card3, .card4 {
+    margin: 40px;
+    }
+  .intro {
+    width: 50%;
+  }
+}
+
+/*Large screen */
+@media only screen and (min-width: 1201px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "h"
+    "m"
+    "c"
+    "f";
+  }
+
+  .card1, .card2, .card3, .card4 {
+  margin: 40px;
+  }
+
+  .intro {
+    width: 40%;
+  }
+}
